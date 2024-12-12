@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Pretty Princess Jal</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #ff88cc;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.2em;
+      color: #555;
+      text-align: center;
+      margin: 0 20px 1.5em;
+    }
+    .heart {
+      font-size: 5em;
+      color: #ff88cc;
+      margin-bottom: 1em;
+      animation: heartbeat 1.5s infinite;
+    }
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+    button {
+      background-color: #ff88cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-bottom: 1em;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff66aa;
+    }
+    #video-container, #photo-container {
+      display: none;
+      margin-top: 1.5em;
+    }
+    video {
+      max-width: 90%;
+      border: 2px solid #ff88cc;
+      border-radius: 10px;
+    }
+    .polaroid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border: 10px solid white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      margin: 20px 0;
+      padding-bottom: 10px;
+    }
+    .polaroid img {
+      max-width: 300px;
+      height: auto;
+    }
+    .caption {
+      font-size: 1em;
+      color: #555;
+      text-align: center;
+      margin-top: 10px;
+    }
+    footer {
+      font-size: 0.9em;
+      color: #999;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>For My Pretty Princess Jal</h1>
+  <div class="heart">❤️</div>
+  <p>
+    Thank you sayang, my beautiful princess, for staying with me this year.  
+    You've made every moment sweeter and filled with unforgettable memories.  
+    I am so lucky to have you in my life.
+  </p>
+  <button onclick="revealVideo()">Click Here for a Surprise</button>
+  <div id="video-container">
+    <video controls onended="revealPhoto()">
+      <source src="My_Princess_Birthday_3.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div id="photo-container">
+    <div class="polaroid">
+      <img src="DSC00004.jpg" alt="A Sweet Memory">
+      <div class="caption">A sweet memory with my Princess Jal</div>
+    </div>
+  </div>
+  <footer>&copy; 2024 Hajjuwan</footer>
+
+  <script>
+    function revealVideo() {
+      const videoContainer = document.getElementById('video-container');
+      videoContainer.style.display = 'block';
+    }
+    function revealPhoto() {
+      const photoContainer = document.getElementById('photo-container');
+      photoContainer.style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
